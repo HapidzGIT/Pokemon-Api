@@ -31,7 +31,6 @@ export const Pokemon = () => {
                       <img src={pokemons.sprites.other.dream_world.front_default} alt={pokemons.name} className="max-w-48 mx-auto max-h-40 p-3" />
                     </div>
                     <h1 className="font-bold mt-3 text-2xl">Name : {pokemons.name}</h1>
-
                     <button onClick={() => handleOpened(pokemons)} className="py-5 bg-cyan-500 px-7 rounded-md mb-4 mt-3 font-semibold text-white">
                       Detail
                     </button>
@@ -53,7 +52,7 @@ export const Pokemon = () => {
                 <div className="flex justify-center gap-5 items-center">
                   {detailSelect.abilities.map((item: any, index: number) => (
                     <>
-                      <div key={index} className="text-xl mt-5 border p-5 border-slate-500 font-semibold hover:bg-slate-700 hover:text-white transition duration-300 ease-in-out">
+                      <div key={index} className="text-xl mt-5 border cursor-pointer p-5 border-slate-500 font-semibold hover:bg-slate-700 hover:text-white transition duration-300 ease-in-out">
                         {item.ability.name}
                       </div>
                     </>
@@ -80,7 +79,7 @@ export const Pokemon = () => {
           )}
           {nextUrl && (
             <button
-              className="fixed left-[95%] bg-slate-600 text-white px-4 rounded-md bottom-72 text-5xl"
+              className="fixed lg:left-[95%] left-[85%] bg-slate-600 text-white px-4 rounded-md bottom-72 text-5xl"
               onClick={() => {
                 setCurrentUrl(nextUrl);
               }}
